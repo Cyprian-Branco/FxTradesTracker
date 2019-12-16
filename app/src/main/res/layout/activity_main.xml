@@ -32,6 +32,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/findFormButton"
         android:layout_alignParentBottom="true"
+        android:onClick="goTotrade_details"
         android:padding="30dp" />
 
 </RelativeLayout>
