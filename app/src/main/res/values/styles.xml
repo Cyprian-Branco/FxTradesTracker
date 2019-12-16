@@ -8,5 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
+    <!--<style name="AppTheme.Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/</item>
+        <item name="android:textColor">@color/White</item>
+    </style>-->
 
 </resources>
