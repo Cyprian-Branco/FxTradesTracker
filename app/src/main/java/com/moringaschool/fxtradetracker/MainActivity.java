@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goTotrade_details(View v){
-        Intent intent = new Intent(this, trade_details.class);
+        Intent intent = new Intent(this, Trade_details.class);
         startActivity(intent);
     }
 
