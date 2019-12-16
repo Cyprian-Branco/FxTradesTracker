@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Trade_details"></activity>
+        <activity android:name=".Amount"></activity>
     </application>
 
 </manifest>
