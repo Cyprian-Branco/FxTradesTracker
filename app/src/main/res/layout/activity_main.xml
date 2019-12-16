@@ -4,18 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView"
-        android:src="@drawable/foreximage1"
-        android:scaleType="centerCrop" />
-
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FxTradesTracker"
+        android:text="@string/fxtradestracker"
         android:layout_marginTop="35dp"
         android:id="@+id/appNameTextView"
         android:textColor="@color/colorTextIcons"
@@ -23,16 +16,16 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textStyle="bold" />
+
     <Button
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Track Here"
+        android:text="Click Here"
         android:layout_centerHorizontal="true"
-        android:id="@+id/findFormButton"
         android:layout_alignParentBottom="true"
+        android:id="@+id/findFormButton"
         android:onClick="goTotrade_details"
-        android:padding="30dp" />
+       />
+
 
 </RelativeLayout>
