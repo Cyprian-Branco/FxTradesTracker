@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.moringaschool.fxtradetracker.models.Amount;
 
@@ -22,6 +23,9 @@ public class Trade_details extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form_details);
         ButterKnife.bind(this);
+
+        Toolbar topToolbar = (Toolbar) findViewById(R.id.top_toolbar);
+        setSupportActionBar(topToolbar);
 
         mCalculateFormButton.setOnClickListener(this);
 

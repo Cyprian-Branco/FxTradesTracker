@@ -3,10 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".models.MainActivity">
+    tools:context=".models.MainActivity"
+    android:background="@color/colorGreenA">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/top_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottom_toolbar"
         android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,12 +25,6 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView"
-        android:src="@color/colorPrimary"
-        android:scaleType="centerCrop" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,8 +45,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:id="@+id/findFormButton"
-        android:onClick="goTotrade_details"
-       />
+        android:onClick="goTotrade_details" />
 
 
 </RelativeLayout>

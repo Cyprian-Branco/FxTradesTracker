@@ -17,8 +17,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Toolbar topToolbar = (Toolbar) findViewById(R.id.top_toolbar);
+        setSupportActionBar(topToolbar);
+
+        Toolbar bottomToolbar = (Toolbar) findViewById(R.id.bottom_toolbar);
+        setSupportActionBar(bottomToolbar);
+
     }
 
     public void goTotrade_details(View v){
