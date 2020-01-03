@@ -1,10 +1,12 @@
-package com.moringaschool.fxtradetracker;
+package com.moringaschool.fxtradetracker.models;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.moringaschool.fxtradetracker.R;
 
 public class Amount extends AppCompatActivity {
     @Override

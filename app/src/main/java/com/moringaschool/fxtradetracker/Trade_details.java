@@ -8,6 +8,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.moringaschool.fxtradetracker.models.Amount;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
