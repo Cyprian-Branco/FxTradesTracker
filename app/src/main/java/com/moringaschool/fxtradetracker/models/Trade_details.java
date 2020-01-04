@@ -1,4 +1,4 @@
-package com.moringaschool.fxtradetracker;
+package com.moringaschool.fxtradetracker.models;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,14 +9,16 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.moringaschool.fxtradetracker.models.Amount;
+import com.moringaschool.fxtradetracker.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class Trade_details extends AppCompatActivity implements View.OnClickListener  {
-    @BindView(R.id.locationEditText) EditText mLocationEditText;
-    @BindView(R.id.calculateFormButton) Button mCalculateFormButton;
+    @BindView(R.id.locationEditText)
+    EditText mLocationEditText;
+    @BindView(R.id.calculateFormButton)
+    Button mCalculateFormButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
