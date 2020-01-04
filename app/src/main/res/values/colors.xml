@@ -7,7 +7,10 @@
     <color name="colorAccent">#009688</color>
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondaryText">#727272</color>
-    <color name="colorDivider">#B6B6B6</color>
+    <color name="colorDivider">#1f2212</color>
     <color name="colorGreenA">#8f976d</color>
     <color name="colorGreenB">#888b77</color>
+    <color name="chineseBlack">#141414</color>
+    <color name="richBlack">#010b13</color>
+    <color name="crystalBlue">#68a0b0</color>
 </resources>
