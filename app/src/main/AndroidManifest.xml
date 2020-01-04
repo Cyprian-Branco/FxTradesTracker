@@ -18,16 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Trade_details">
+        <activity android:name=".models.Trade_details">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.fxtradetracker.models.MainActivity">
+                android:value="com.moringaschool.fxtradetracker.models.Amount">
             </meta-data>
         </activity>
         <activity android:name=".models.Amount">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.fxtradetracker.Trade_details">
+                android:value="com.moringaschool.fxtradetracker.models.Trade_details">
             </meta-data>
         </activity>
     </application>
