@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.moringaschool.fxtradetracker.R;
-import com.moringaschool.fxtradetracker.Trade_details;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,10 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar topToolbar = (Toolbar) findViewById(R.id.top_toolbar);
         setSupportActionBar(topToolbar);
-
-        Toolbar bottomToolbar = (Toolbar) findViewById(R.id.bottom_toolbar);
-        setSupportActionBar(bottomToolbar);
-
     }
 
     public void goTotrade_details(View v){

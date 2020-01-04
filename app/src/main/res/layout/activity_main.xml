@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".models.MainActivity"
-    android:background="@color/chineseBlack">
+    android:background="@color/colorDivider">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/top_toolbar"
@@ -12,23 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:titleTextColor="@android:color/white"
-
-        android:background="?attr/colorBackgroundFloating">
-
-    </androidx.appcompat.widget.Toolbar>
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/bottom_toolbar"
-        android:minHeight="?attr/actionBarSize"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:titleTextColor="@android:color/white"
         android:background="?attr/colorPrimary">
 
     </androidx.appcompat.widget.Toolbar>
-
 
     <TextView
         android:layout_width="wrap_content"
