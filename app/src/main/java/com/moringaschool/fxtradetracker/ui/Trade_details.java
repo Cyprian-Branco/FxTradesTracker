@@ -1,4 +1,4 @@
-package com.moringaschool.fxtradetracker.models;
+package com.moringaschool.fxtradetracker.ui;
 
 import android.content.Intent;
 import android.os.Bundle;

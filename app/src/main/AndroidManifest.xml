@@ -11,24 +11,25 @@
         android:supportsRtl="true"
         android:theme="@style/NoActionBarTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".models.MainActivity">
+
+        <activity android:name=".adapters.LiveQuotesAdapter" />
+        <activity android:name=".ui.LiveQuotes" />
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".models.Trade_details">
+        <activity android:name=".ui.Trade_details">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.fxtradetracker.models.Amount">
-            </meta-data>
+                android:value="com.moringaschool.fxtradetracker.ui.Amount" />
         </activity>
-        <activity android:name=".models.Amount">
+        <activity android:name=".ui.Amount">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.fxtradetracker.models.Trade_details">
-            </meta-data>
+                android:value="com.moringaschool.fxtradetracker.ui.Trade_details" />
         </activity>
     </application>
 

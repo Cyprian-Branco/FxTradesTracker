@@ -1,4 +1,4 @@
-package com.moringaschool.fxtradetracker.models;
+package com.moringaschool.fxtradetracker.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
