@@ -1,31 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/richBlack">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/top_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
 
-    <LinearLayout
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/richBlack"
+        android:layout_marginTop="55dp"
         android:padding="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/fxNameTextView"
+            android:id="@+id/symbolTextView"
             android:textSize="20dp"
             android:textStyle="bold"
+            android:layout_margin="10dp"
             android:text="Symbol"
-            android:textColor="@color/colorPrimary"/>
+            android:textColor="@color/colorSecondaryText"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/fxTextView"
+            android:id="@+id/priceTextView"
             android:textSize="20dp"
+            android:layout_toRightOf="@id/symbolTextView"
+            android:layout_margin="10dp"
             android:textStyle="bold"
-            android:text="Currency"
-            android:textColor="@color/colorPrimary"/>
-    </LinearLayout>
-</LinearLayout>
+            android:text="Price"
+            android:textColor="@color/colorSecondaryText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/changeTextView"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/priceTextView"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="Change"
+            android:textColor="@color/colorSecondaryText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/percentageTextView"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/changeTextView"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="% "
+            android:textColor="@color/colorSecondaryText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateTextView"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/percentageTextView"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="Date"
+            android:textColor="@color/colorSecondaryText"/>
+    </RelativeLayout>
+</RelativeLayout>
