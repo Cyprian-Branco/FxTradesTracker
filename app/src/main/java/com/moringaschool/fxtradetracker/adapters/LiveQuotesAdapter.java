@@ -12,16 +12,19 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.moringaschool.fxtradetracker.R;
+import com.moringaschool.fxtradetracker.models.ForexBusiness;
 import com.moringaschool.fxtradetracker.ui.LiveQuotes;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class LiveQuotesAdapter extends RecyclerView.Adapter<LiveQuotesAdapter.LiveQuotesViewHolder> {
-    private List<Business> mLiveQuotes;
+    private List<ForexBusiness> mLiveQuotes;
     private Context mContext;
 
-    public LiveQuotesAdapter(Context context, List<Business> liveQuotes){
+    public LiveQuotesAdapter(Context context, List<ForexBusiness> liveQuotes){
         mContext = context;
         mLiveQuotes = liveQuotes;
     }
