@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/richBlack">
+    android:background="@color/colorDivider">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/top_toolbar"
         android:minHeight="?attr/actionBarSize"
@@ -14,64 +14,81 @@
         android:background="?attr/colorPrimary">
 
     </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="55dp"
+        android:padding="10dp">
 
-    <TextView
-        android:id="@+id/formTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculate P/L below:"
-        android:layout_marginTop="90dp"
-        android:gravity="center_vertical"
-        android:layout_centerHorizontal="true"
-        />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:layout_below="@id/formTextView"
-        android:hint="Enter total amount invested"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:gravity="center_vertical"
-        android:id="@+id/locationEditText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:layout_below="@id/formTextView"
-        android:hint="Enter total pips traded for the day"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="140dp"
-        android:gravity="center_vertical"
-        android:id="@+id/locationEditText1"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:layout_below="@id/formTextView"
-        android:hint="Enter lot size"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="180dp"
-        android:gravity="center_vertical"
-        android:id="@+id/locationEditText2"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Calculate"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/calculateFormButton"
-        android:layout_alignParentBottom="true"
-        android:padding="30dp" />
-
+        <TextView
+            android:id="@+id/formTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Calculate P/L below"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorTextIcons"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Input Amount:"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorTextIcons"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:gravity="center_vertical"
+            android:id="@+id/locationEditText"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Input Pips:"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorTextIcons"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:gravity="center_vertical"
+            android:id="@+id/locationEditText1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Input Lot Size:"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorTextIcons"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:gravity="center_vertical"
+            android:id="@+id/locationEditText2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Calculate"
+            android:layout_marginTop="60dp"
+            android:id="@+id/calculateFormButton"
+            android:onClick="goToTrade_details"
+            android:padding="30dp" />
+    </LinearLayout>
 
 </RelativeLayout>

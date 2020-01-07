@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity"
+    tools:context=".ui.HomeFragments"
     android:background="@color/colorDivider">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/top_toolbar"
-        android:minHeight="?attr/actionBarSize"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:titleTextColor="@android:color/white"
-        android:background="?attr/colorPrimary">
+    <!-- TODO: Update blank fragment layout -->
 
-    </androidx.appcompat.widget.Toolbar>
-
-    <TextView
+<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fxtradestracker"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="80dp"
         android:id="@+id/appNameTextView"
         android:textColor="@color/colorTextIcons"
         android:textSize="30sp"
@@ -34,8 +26,6 @@
         android:text="Click Here To Calculate"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:id="@+id/findFormButton"
-        android:onClick="goTotrade_details" />
-
-
-</RelativeLayout>
+        android:layout_marginTop="180dp"
+        android:id="@+id/findFormButton"/>
+</FrameLayout>
