@@ -1,24 +1,16 @@
 
 package com.moringaschool.fxtradetracker.models;
 
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class ForexBusiness {
 
-    @SerializedName("status")
+    @SerializedName("prices")
     @Expose
-    private Boolean status;
-    @SerializedName("msg")
-    @Expose
-    private String msg;
-    @SerializedName("response")
-    @Expose
-    private List<Response> response = null;
-    @SerializedName("info")
-    @Expose
-    private Info info;
+    private List<Price> prices = null;
 
     /**
      * No args constructor for use in serialization
@@ -29,68 +21,23 @@ public class ForexBusiness {
 
     /**
      * 
-     * @param msg
-     * @param response
-     * @param status
-     * @param info
+     * @param prices
      */
-    public ForexBusiness(Boolean status, String msg, List<Response> response, Info info) {
+    public ForexBusiness(List<Price> prices) {
         super();
-        this.status = status;
-        this.msg = msg;
-        this.response = response;
-        this.info = info;
+        this.prices = prices;
     }
 
-    public Boolean getStatus() {
-        return status;
+    public List<Price> getPrices() {
+        return prices;
     }
 
-    public void setStatus(Boolean status) {
-        this.status = status;
+    public void setPrices(List<Price> prices) {
+        this.prices = prices;
     }
 
-    public ForexBusiness withStatus(Boolean status) {
-        this.status = status;
-        return this;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
-    public ForexBusiness withMsg(String msg) {
-        this.msg = msg;
-        return this;
-    }
-
-    public List<Response> getResponse() {
-        return response;
-    }
-
-    public void setResponse(List<Response> response) {
-        this.response = response;
-    }
-
-    public ForexBusiness withResponse(List<Response> response) {
-        this.response = response;
-        return this;
-    }
-
-    public Info getInfo() {
-        return info;
-    }
-
-    public void setInfo(Info info) {
-        this.info = info;
-    }
-
-    public ForexBusiness withInfo(Info info) {
-        this.info = info;
+    public ForexBusiness withPrices(List<Price> prices) {
+        this.prices = prices;
         return this;
     }
 

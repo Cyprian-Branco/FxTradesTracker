@@ -2,13 +2,11 @@ package com.moringaschool.fxtradetracker.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import com.moringaschool.fxtradetracker.R;
 
@@ -27,8 +25,8 @@ public class Trade_details extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.form_details);
         ButterKnife.bind(this);
 
-        Toolbar topToolbar = (Toolbar) findViewById(R.id.top_toolbar);
-        setSupportActionBar(topToolbar);
+       /* Toolbar topToolbar = (Toolbar) findViewById(R.id.top_toolbar);
+        setSupportActionBar(topToolbar);*/
 
         mCalculateFormButton.setOnClickListener(this);
 
@@ -43,10 +41,10 @@ public class Trade_details extends AppCompatActivity implements View.OnClickList
         }
 
     }
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
-    }
+    }*/
 
 }
