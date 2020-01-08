@@ -23,3 +23,6 @@ To build, install and run a debug version, run this from the root of the project
 * Email: branco1lelgo@gmail.com
 
 ## Licence
+MIT License
+
+Copyright (c) 2020 Cyprian-Branco
