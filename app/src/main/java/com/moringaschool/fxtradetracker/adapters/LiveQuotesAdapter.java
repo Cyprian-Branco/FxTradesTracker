@@ -17,8 +17,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class LiveQuotesAdapter extends RecyclerView.Adapter<LiveQuotesAdapter.LiveQuotesViewHolder> {
+    private static final String TAG = LiveQuotesAdapter.class.getSimpleName();
+
     private List<Price> mLiveQuotes;
-    private Context mContext;
+
+    private Context mContext ;
 
     public LiveQuotesAdapter(Context context, List<Price> liveQuotes){
         mContext = context;
@@ -32,7 +35,7 @@ public class LiveQuotesAdapter extends RecyclerView.Adapter<LiveQuotesAdapter.Li
     }
     @Override
     public void onBindViewHolder(LiveQuotesAdapter.LiveQuotesViewHolder holder, int position){
-        holder.bindLiveQuotes(mLiveQuotes.get(position));
+        holder.bindLiveQuotes(mLiveQuotes,position);
     }
     @Override
     public int getItemCount(){
@@ -44,17 +47,21 @@ public class LiveQuotesAdapter extends RecyclerView.Adapter<LiveQuotesAdapter.Li
         @BindView(R.id.askTextView) TextView mAskTextView;
         @BindView(R.id.bidTextView) TextView mBidTextView;
         @BindView(R.id.dateTextView) TextView mDateTextView;
+        private Context mContext;
+
 
         public LiveQuotesViewHolder(View itemView){
             super(itemView);
             ButterKnife.bind(this, itemView);
             mContext = itemView.getContext();
         }
-        public void bindLiveQuotes(Price liveQuotes){
-            mAskTextView.setText(liveQuotes.getHighAsk());
-            mBidTextView.setText(liveQuotes.getHighBid());
-            mDateTextView.setText(liveQuotes.getOccurredAt());
-
+        public void bindLiveQuotes(List<Price> liveQuotes, int position){
+/*
+            mSymbolTextView.setText(mLiveQuotes.get(position).get());
+*/
+            mAskTextView.setText(mLiveQuotes.get(position).getHighAsk());
+            mBidTextView.setText(liveQuotes.get(position).getHighBid());
+            mDateTextView.setText(mLiveQuotes.get(position).getOccurredAt());
 
         }
     }

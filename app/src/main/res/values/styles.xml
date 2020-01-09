@@ -15,8 +15,8 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorGreenA</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorDivider</item>
+        <item name="colorAccent">@color/colorDivider</item>
     </style>
 
     <!--<style name="AppTheme.NoActionBar">

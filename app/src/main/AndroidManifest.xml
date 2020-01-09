@@ -22,9 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".adapters.LiveQuotesAdapter" />
-        <activity android:name=".ui.LiveQuotes" />
+        <activity android:name=".ui.LiveQuotesFragment" />
         <activity android:name=".ui.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

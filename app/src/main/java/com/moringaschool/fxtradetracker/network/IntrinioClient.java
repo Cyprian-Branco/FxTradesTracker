@@ -1,41 +1,39 @@
 package com.moringaschool.fxtradetracker.network;
 
-import java.io.IOException;
+import com.moringaschool.fxtradetracker.util.Constants;
 
-import okhttp3.Interceptor;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-import static com.moringaschool.fxtradetracker.util.Constants.INTRINIO_API_KEY;
-import static com.moringaschool.fxtradetracker.util.Constants.INTRINIO_BASE_URL;
 
 
 public class IntrinioClient {
     private static Retrofit retrofit = null;
 
-    public static IntrinioApi getClient(){
+    public static Retrofit getClient(){
         if(retrofit == null){
-            OkHttpClient okHttpClient = new OkHttpClient.Builder()
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(Constants.INTRINIO_BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+           /* OkHttpClient okHttpClient = new OkHttpClient.Builder()
                     .addInterceptor(new Interceptor() {
                         @Override
-                        public Response intercept(Chain chain) throws IOException {
+                        public Responses intercept(Chain chain) throws IOException {
                             Request newRequest = chain.request().newBuilder()
-                                    .addHeader("Authorization", INTRINIO_API_KEY)
+                                    .addHeader("Authorization", FCS_API_KEY)
                                     .build();
                             return chain.proceed(newRequest);
                         }
                     })
                     .build();
             retrofit = new Retrofit.Builder()
-                    .baseUrl(INTRINIO_BASE_URL)
+                    .baseUrl(FCS_BASE_URL)
                     .client(okHttpClient)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .build();
+                    .build();*/
+
 
         }
-        return retrofit.create(IntrinioApi.class);
+        return retrofit;
     }
 }
