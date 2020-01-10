@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProfitLossActivity"
+    android:background="@color/colorDivider">
+
+    <TextView
+        android:id="@+id/formTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center_vertical"
+        android:text="Calculate P/L below"
+        android:textColor="@color/colorTextIcons" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:text="Input Amount:"
+        android:textColor="@color/colorTextIcons" />
+
+    <EditText
+        android:id="@+id/locationEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:background="#ffffff"
+        android:inputType="number" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:text="Input Pips:"
+        android:textColor="@color/colorTextIcons" />
+
+    <EditText
+        android:id="@+id/locationEditText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:background="#ffffff"
+
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="Input Lot Size:"
+        android:textColor="@color/colorTextIcons" />
+
+    <EditText
+        android:id="@+id/locationEditText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/calculateFormButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/buttonstyle"
+        android:onClick="goToTrade_details"
+        android:padding="20dp"
+        android:shadowRadius="@android:integer/config_shortAnimTime"
+        android:text="Calculate" />
+
+</FrameLayout>

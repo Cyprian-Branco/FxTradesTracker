@@ -30,8 +30,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LiveQuotesFragment extends Fragment {
-    private static final String TAG = LiveQuotesFragment.class.getSimpleName();
+public class LiveQuotesActivity extends Fragment {
+    private static final String TAG = LiveQuotesActivity.class.getSimpleName();
 
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
@@ -45,7 +45,7 @@ public class LiveQuotesFragment extends Fragment {
     public List<Price> liveQuotes = new ArrayList<>();
 
 
-    public LiveQuotesFragment() {
+    public LiveQuotesActivity() {
         // Required empty public constructor
     }
 

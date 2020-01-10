@@ -10,13 +10,14 @@ import androidx.fragment.app.Fragment;
 
 import com.moringaschool.fxtradetracker.R;
 
+
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CalculatorFragment extends Fragment {
+public class ProfitLossActivity extends Fragment {
 
 
-    public CalculatorFragment() {
+    public ProfitLossActivity() {
         // Required empty public constructor
     }
 
@@ -24,8 +25,16 @@ public class CalculatorFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.calculator, container, false);
-    }
+        View view = inflater.inflate(R.layout.fragment_profit_loss, container, false);
+
+       /* Button button = (Button) view.findViewById(R.id.calculateFormButton);
+        button.setOnClickListener(new onClickListener(
+                                  }
+        );
+*/
+
+
+return view;
+}
 
 }

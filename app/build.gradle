@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -47,5 +47,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     apply plugin: 'com.google.gms.google-services'
     implementation 'androidx.cardview:cardview:1.0.0'
-
+    implementation 'com.firebaseui:firebase-ui-database:3.3.1'
 }
+apply plugin: 'com.google.gms.google-services'
+

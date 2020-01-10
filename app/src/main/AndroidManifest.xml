@@ -23,17 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".adapters.LiveQuotesAdapter" />
-        <activity android:name=".ui.LiveQuotesFragment" />
-        <activity android:name=".ui.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.fxtradetracker.ui.Trade_details" />
-        </activity>
-        <activity android:name=".ui.Trade_details">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.fxtradetracker.ui.Amount" />
-        </activity>
+        <activity android:name=".ui.LiveQuotesActivity" />
     </application>
 
 </manifest>

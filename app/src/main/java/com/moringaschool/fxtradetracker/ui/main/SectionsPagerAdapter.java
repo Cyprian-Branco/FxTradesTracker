@@ -9,9 +9,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.moringaschool.fxtradetracker.R;
-import com.moringaschool.fxtradetracker.ui.HistoryFragment;
-import com.moringaschool.fxtradetracker.ui.HomeFragments;
-import com.moringaschool.fxtradetracker.ui.LiveQuotesFragment;
+import com.moringaschool.fxtradetracker.ui.HistoryActivity;
+import com.moringaschool.fxtradetracker.ui.LiveQuotesActivity;
+import com.moringaschool.fxtradetracker.ui.ProfitLossActivity;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -20,7 +20,7 @@ import com.moringaschool.fxtradetracker.ui.LiveQuotesFragment;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2,R.string.tab_text_3};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_2, R.string.tab_text_3,R.string.tab_text_4};
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
@@ -35,14 +35,13 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         switch (position){
             case 0:
-                fragment = new  HomeFragments();
+                fragment = new LiveQuotesActivity();
                 break;
             case 1:
-                fragment = new LiveQuotesFragment();
+                fragment = new ProfitLossActivity();
                 break;
             case 2:
-                fragment = new HistoryFragment();
-
+                fragment = new HistoryActivity();
         }
         return fragment;
     }
