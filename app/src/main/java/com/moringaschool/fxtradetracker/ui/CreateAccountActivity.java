@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.moringaschool.fxtradetracker.R;
 
 import butterknife.BindView;
@@ -32,6 +33,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     @BindView(R.id.loginTextView) TextView mLoginTextView;
 
     private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,8 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         mCreateUserButoon.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
+
+        createAuthSateListener();
     }
     @Override
     public void onClick(View v){
@@ -74,5 +78,31 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
                         }
                     }
                 });
+    }
+    public void createAuthSateListener(){
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                final FirebaseUser user = firebaseAuth.getCurrentUser();
+                if(user!= null){
+                    Intent intent = new Intent(CreateAccountActivity.this, LiveQuotesActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        };
+    }
+    @Override
+    public void onStart(){
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+    @Override
+    public void onStop(){
+        super.onStop();
+        if(mAuthListener != null){
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
     }
 }
