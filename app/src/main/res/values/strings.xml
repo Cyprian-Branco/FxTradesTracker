@@ -4,9 +4,9 @@
     <string name="button">Button</string>
     <string name="title_activity_tab">TabActivity</string>
     <string name="tab_text_1"></string>
-    <string name="tab_text_2">P/F Cal</string>
-    <string name="tab_text_3">History</string>
-    <string name="tab_text_4">LiveQuotes</string>
+    <string name="tab_text_2">LiveQuotes</string>
+    <string name="tab_text_3">P/F Cal</string>
+    <string name="tab_text_4">History</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

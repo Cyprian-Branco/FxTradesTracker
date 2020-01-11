@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.CreateAccountActivity"></activity>
         <activity
             android:name=".ui.main.TabActivity"
             android:theme="@style/AppTheme">

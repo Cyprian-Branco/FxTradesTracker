@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "762160504454",
-    "firebase_url": "https://myrestaurants-5f739.firebaseio.com",
-    "project_id": "myrestaurants-5f739",
-    "storage_bucket": "myrestaurants-5f739.appspot.com"
+    "project_number": "625554432236",
+    "firebase_url": "https://fxtradetracker-b4914.firebaseio.com",
+    "project_id": "fxtradetracker-b4914",
+    "storage_bucket": "fxtradetracker-b4914.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:762160504454:android:048312c856c36839b8bb07",
+        "mobilesdk_app_id": "1:625554432236:android:3e5607ea80081a5711c5c9",
         "android_client_info": {
           "package_name": "com.moringaschool.fxtradetracker"
         }
       },
       "oauth_client": [
         {
-          "client_id": "762160504454-67snccc6lm5p7ppc2m0r06ohli68d1ie.apps.googleusercontent.com",
+          "client_id": "625554432236-r9k39uuod0h3gms491tqekr91bp3csfm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB2wTNDpI3O3BWBuk_ovbOP6s_FhZtY2Ds"
+          "current_key": "AIzaSyAyTm2J4whhlFknnD_5DPjkUbjslpZm_F4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "762160504454-67snccc6lm5p7ppc2m0r06ohli68d1ie.apps.googleusercontent.com",
+              "client_id": "625554432236-r9k39uuod0h3gms491tqekr91bp3csfm.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
