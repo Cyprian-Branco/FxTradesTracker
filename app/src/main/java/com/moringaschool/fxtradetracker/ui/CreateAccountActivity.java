@@ -3,7 +3,9 @@ package com.moringaschool.fxtradetracker.ui;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +19,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
+import com.google.firebase.database.DatabaseReference;
 import com.moringaschool.fxtradetracker.R;
 
 import butterknife.BindView;
@@ -34,6 +38,10 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    private DatabaseReference mDatabaseUsers;
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +51,9 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
         mLoginTextView.setOnClickListener(this);
         mCreateUserButoon.setOnClickListener(this);
+
+        sharedPreferences = getSharedPreferences("TRADEDATA", Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -72,6 +83,13 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Log.d(TAG, "Authentication successful");
+
+                            FirebaseUser currentUser = mAuth.getCurrentUser();
+
+                            String uid = currentUser.getUid();
+                            /*UserInfo userInfo = new UserInfo(name, email);
+
+                            mDatabaseUsers.child(uid).setValue(userInfo).addOnCompleteListener((task));*/
                         }else{
                             Toast.makeText(CreateAccountActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
