@@ -15,12 +15,9 @@ import com.moringaschool.fxtradetracker.R;
  * A simple {@link Fragment} subclass.
  */
 public class HistoryActivity extends Fragment {
-
-
     public HistoryActivity() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

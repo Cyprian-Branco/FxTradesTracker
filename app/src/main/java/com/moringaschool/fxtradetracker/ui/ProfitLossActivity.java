@@ -31,7 +31,7 @@ import butterknife.OnClick;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProfitLossActivity extends Fragment {
+public class ProfitLossActivity extends Fragment{
     @BindView(R.id.currencyEditText) EditText mCurrencyEditText;
     @BindView(R.id.amountEditText) EditText mAmountEditText;
     @BindView(R.id.buyingEditText) EditText mBuyingEditText;
@@ -53,8 +53,6 @@ public class ProfitLossActivity extends Fragment {
         FirebaseUser mUser = mAuth.getCurrentUser();
         String uid = mUser.getUid();
         mDatabase = FirebaseDatabase.getInstance().getReference().child("TRADEDATA");
-
-
 
         mCalculateTradeData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,4 +83,5 @@ public class ProfitLossActivity extends Fragment {
             Toast.makeText(getActivity(), "Enter Currency", Toast.LENGTH_SHORT).show();
         }
     }
+
 }
