@@ -3,53 +3,53 @@ package com.moringaschool.fxtradetracker.ui.main;
 import java.io.Serializable;
 
 public class TradeData implements Serializable {
-    int amount;
-    Double buyingSellingPrice;
-    Double stopTakePrice;
-    Double volume;
-    Double profitLoss;
+    String amount;
+    String buyingSellingPrice;
+    String  stopTakePrice;
+    String volume;
+    String profitLoss;
 
-    public int getAmount() {
+    public String getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(String amount) {
         this.amount = amount;
     }
 
-    public Double getBuyingSellingPrice() {
+    public String getBuyingSellingPrice() {
         return buyingSellingPrice;
     }
 
-    public void setBuyingSellingPrice(Double buyingSellingPrice) {
+    public void setBuyingSellingPrice(String buyingSellingPrice) {
         this.buyingSellingPrice = buyingSellingPrice;
     }
 
-    public Double getStopTakePrice() {
+    public String getStopTakePrice() {
         return stopTakePrice;
     }
 
-    public void setStopTakePrice(Double stopTakePrice) {
+    public void setStopTakePrice(String stopTakePrice) {
         this.stopTakePrice = stopTakePrice;
     }
 
-    public Double getVolume() {
+    public String getVolume() {
         return volume;
     }
 
-    public void setVolume(Double volume) {
+    public void setVolume(String volume) {
         this.volume = volume;
     }
 
-    public Double getProfitLoss() {
+    public String getProfitLoss() {
         return profitLoss;
     }
 
-    public void setProfitLoss(Double profitLoss) {
+    public void setProfitLoss(String profitLoss) {
         this.profitLoss = profitLoss;
     }
 
-    public TradeData(int amount, Double buyingSellingPrice, Double stopTakePrice, Double volume, Double profitLoss) {
+    public TradeData(String amount, String buyingSellingPrice, String stopTakePrice, String volume, String profitLoss) {
         this.amount = amount;
         this.buyingSellingPrice = buyingSellingPrice;
         this.stopTakePrice = stopTakePrice;
