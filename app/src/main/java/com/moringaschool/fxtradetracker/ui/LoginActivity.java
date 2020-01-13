@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -37,6 +39,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private ProgressDialog mAuthProgressDialog;
 
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +51,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mRegisterTextView.setOnClickListener(this);
         mPasswordLginButton.setOnClickListener(this);
 
+        sharedPreferences = getSharedPreferences("TRADEDATA", Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
         createAuthProgressDialog();
 
         mAuth = FirebaseAuth.getInstance();
@@ -54,6 +62,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user != null){
+                    editor.putBoolean("LOGINSTATUS", true);
                     Intent intent = new Intent(LoginActivity.this, TabActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);

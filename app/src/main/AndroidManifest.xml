@@ -21,8 +21,7 @@
         </activity>
         <activity android:name=".ui.CreateAccountActivity" />
         <activity
-            android:name=".ui.main.TabActivity"
-            android:theme="@style/AppTheme">
+            android:name=".ui.main.TabActivity">
 
         </activity>
         <activity android:name=".adapters.LiveQuotesAdapter" />
