@@ -3,12 +3,7 @@ package com.moringaschool.fxtradetracker.models;
 import java.io.Serializable;
 
 public class TradeData implements Serializable {
-    String currency;
-    String amount;
-    String buyingSellingPrice;
-    String  stopTakePrice;
-    String volume;
-    String profitLoss;
+
 
     public String getAmount() {
         return amount;
@@ -56,13 +51,27 @@ public class TradeData implements Serializable {
 
     public void setCurrency(String currency) {
         this.currency = currency;
+
     }
+    String currency;
+    String amount;
+    String buyingSellingPrice;
+    String stopTakePrice;
+    String volume;
+    String profitLoss;
+
+
 
     public TradeData(String currency, String amount, String buyingSellingPrice, String stopTakePrice, String volume, String profitLoss) {
+        this.currency = currency;
         this.amount = amount;
         this.buyingSellingPrice = buyingSellingPrice;
         this.stopTakePrice = stopTakePrice;
         this.volume = volume;
         this.profitLoss = profitLoss;
+    }
+
+    public  TradeData(){
+
     }
 }

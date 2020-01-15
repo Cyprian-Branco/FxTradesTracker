@@ -52,7 +52,7 @@ public class ProfitLossActivity extends Fragment{
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser mUser = mAuth.getCurrentUser();
         String uid = mUser.getUid();
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("TRADEDATA");
+        mDatabase = FirebaseDatabase.getInstance().getReference("TRADEDATA").child(uid);
 
         mCalculateTradeData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,21 +67,17 @@ public class ProfitLossActivity extends Fragment{
         String currency = mCurrencyEditText.getText().toString().trim();
         String amount = mAmountEditText.getText().toString().trim();
         String buyingSellingPrice = mBuyingEditText.getText().toString().trim();
-        String takeProfiLossPrice = mPriceEditText.getText().toString().trim();
+        String takeProfitLossPrice = mPriceEditText.getText().toString().trim();
         String volume = mVolumeEditText.getText().toString().trim();
         String profitLossAmount = mProfitLossEditText.getText().toString().trim();
 
-        if(!TextUtils.isEmpty(currency)){
-            String id = mDatabase.push().getKey();
-            TradeData tradeData = new TradeData("currency","amount","buyingSellingPrice", "stopTakePrice",
-            "volume","profitLoss");
 
-            mDatabase.child(id).setValue(tradeData);
+        String id = mDatabase.push().getKey();
+        TradeData tradeData = new TradeData(currency,amount,buyingSellingPrice, takeProfitLossPrice,
+            volume,profitLossAmount);
 
-            Toast.makeText(getActivity(), "Data Saved", Toast.LENGTH_LONG).show();
-        }else{
-            Toast.makeText(getActivity(), "Enter Currency", Toast.LENGTH_SHORT).show();
-        }
+        mDatabase.child(id).setValue(tradeData);
+
     }
 
 }
