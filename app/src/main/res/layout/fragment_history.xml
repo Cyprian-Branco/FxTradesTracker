@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,5 +8,106 @@
     android:background="@color/colorDivider">
 
 
+    <TextView
+        android:id="@+id/profitLossTextView"
+        android:layout_width="110dp"
+        android:layout_height="24dp"
+        android:text="Profit/Loss:"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/volumeTextView"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountTextView"
+        app:layout_constraintVertical_bias="0.077"
+        tools:ignore="MissingConstraints" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/volumeTextView"
+        android:layout_width="84dp"
+        android:layout_height="24dp"
+        android:text="Volume:"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.158"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/takeStopTextView"
+        android:layout_width="80dp"
+        android:layout_height="24dp"
+        android:text="take/stop:"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.159"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/buySellTextView"
+        android:layout_width="84dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Buy/Sell:"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/amountTextView"
+        android:layout_width="84dp"
+        android:layout_height="24dp"
+        android:text="Amount:"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buySellTextView"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/currecyTextView"
+        android:layout_width="88dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="628dp"
+        android:text="Currency:"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/amountTextView"
+        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.481"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fireBaseRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/takeStopTextView"
+        app:layout_constraintVertical_bias="0.107"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/fragment_live_quotes" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
