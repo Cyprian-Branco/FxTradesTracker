@@ -58,11 +58,9 @@ public class HistoryActivity extends Fragment {
         linearLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(linearLayoutManager);
 
-
         readTradeData();
 
         return view;
-
     }
     public void readTradeData(){
         allTradeData.clear();
@@ -80,7 +78,6 @@ public class HistoryActivity extends Fragment {
 
                 TradeDataListAdapter tradeDataListAdapter = new TradeDataListAdapter(getActivity(), allTradeData);
                 mRecyclerView.setAdapter(tradeDataListAdapter);
-
             }
 
             @Override

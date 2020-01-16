@@ -9,4 +9,10 @@
     <string name="tab_text_4">History</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="take_stop">take/stop:</string>
+    <string name="volume">Volume:</string>
+    <string name="currency">Currency:</string>
+    <string name="profi_loss">Prof/Loss:</string>
+    <string name="buying_sell">Buy/Sell:</string>
+    <string name="amount">Amount:</string>
 </resources>
