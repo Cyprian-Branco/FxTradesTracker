@@ -2,8 +2,7 @@
 A simple App that can help you track your forex trades. 
 ## Author
 Cyprian
-## [![codebeat badge](https://codebeat.co/badges/503467f0-bd93-4e69-a630-bfbc4c1d482b)](https://codebeat.co/projects/github-com-cyprian-branco-fxtradestracker-master)
-
+## [![codebeat badge](https://codebeat.co/badges/e5df1886-d89a-41bc-b8a2-7930d020ee54)](https://codebeat.co/projects/github-com-cyprian-branco-fxtradestracker-master)
 
 ## Requirements
 * Android SDK
