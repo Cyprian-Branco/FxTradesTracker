@@ -39,13 +39,11 @@ public class Price {
 
     /**
      * No args constructor for use in serialization
-     * 
      */
     public Price() {
     }
 
     /**
-     * 
      * @param occurredAt
      * @param closeAsk
      * @param totalTicks

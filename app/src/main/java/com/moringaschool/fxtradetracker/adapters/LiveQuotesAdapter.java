@@ -21,41 +21,49 @@ public class LiveQuotesAdapter extends RecyclerView.Adapter<LiveQuotesAdapter.Li
 
     private List<Price> mLiveQuotes;
 
-    private Context mContext ;
+    private Context mContext;
 
-    public LiveQuotesAdapter(Context context, List<Price> liveQuotes){
+    public LiveQuotesAdapter(Context context, List<Price> liveQuotes) {
         mContext = context;
         mLiveQuotes = liveQuotes;
     }
+
     @Override
-    public LiveQuotesAdapter.LiveQuotesViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public LiveQuotesAdapter.LiveQuotesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_live_quotes, parent, false);
         LiveQuotesViewHolder viewHolder = new LiveQuotesViewHolder(view);
         return viewHolder;
     }
+
     @Override
-    public void onBindViewHolder(LiveQuotesAdapter.LiveQuotesViewHolder holder, int position){
-        holder.bindLiveQuotes(mLiveQuotes,position);
+    public void onBindViewHolder(LiveQuotesAdapter.LiveQuotesViewHolder holder, int position) {
+        holder.bindLiveQuotes(mLiveQuotes, position);
     }
+
     @Override
-    public int getItemCount(){
+    public int getItemCount() {
         return mLiveQuotes.size();
     }
 
-    public class LiveQuotesViewHolder extends RecyclerView.ViewHolder{
-        @BindView(R.id.symbolTextView) TextView mSymbolTextView;
-        @BindView(R.id.askTextView) TextView mAskTextView;
-        @BindView(R.id.bidTextView) TextView mBidTextView;
-        @BindView(R.id.dateTextView) TextView mDateTextView;
+    public class LiveQuotesViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.symbolTextView)
+        TextView mSymbolTextView;
+        @BindView(R.id.askTextView)
+        TextView mAskTextView;
+        @BindView(R.id.bidTextView)
+        TextView mBidTextView;
+        @BindView(R.id.dateTextView)
+        TextView mDateTextView;
         private Context mContext;
 
 
-        public LiveQuotesViewHolder(View itemView){
+        public LiveQuotesViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
             mContext = itemView.getContext();
         }
-        public void bindLiveQuotes(List<Price> liveQuotes, int position){
+
+        public void bindLiveQuotes(List<Price> liveQuotes, int position) {
 /*
             mSymbolTextView.setText(mLiveQuotes.get(position).get());
 */
@@ -65,7 +73,6 @@ public class LiveQuotesAdapter extends RecyclerView.Adapter<LiveQuotesAdapter.Li
 
         }
     }
-
 
 
 }

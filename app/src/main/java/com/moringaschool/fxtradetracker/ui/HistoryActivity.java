@@ -33,7 +33,8 @@ import butterknife.ButterKnife;
  * A simple {@link Fragment} subclass.
  */
 public class HistoryActivity extends Fragment {
-    @BindView(R.id.fireBaseRecyclerView) RecyclerView mRecyclerView;
+    @BindView(R.id.fireBaseRecyclerView)
+    RecyclerView mRecyclerView;
 
     ArrayList<TradeData> allTradeData = new ArrayList<>();
 
@@ -45,6 +46,7 @@ public class HistoryActivity extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_history, container, false);
         ButterKnife.bind(this, view);
 
@@ -62,15 +64,15 @@ public class HistoryActivity extends Fragment {
 
         return view;
     }
-    public void readTradeData(){
+
+    public void readTradeData() {
         allTradeData.clear();
         progressDialog.show();
 
         databaseTradeData.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot snapshot:dataSnapshot.getChildren())
-                {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     TradeData tradeData = snapshot.getValue(TradeData.class);
                     allTradeData.add(tradeData);
                 }

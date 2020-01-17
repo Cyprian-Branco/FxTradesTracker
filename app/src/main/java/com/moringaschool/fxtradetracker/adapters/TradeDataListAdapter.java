@@ -13,7 +13,6 @@ import com.moringaschool.fxtradetracker.R;
 import com.moringaschool.fxtradetracker.models.TradeData;
 
 import java.util.ArrayList;
-import java.util.Currency;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -46,7 +45,7 @@ public class TradeDataListAdapter extends RecyclerView.Adapter<TradeDataListAdap
         String profitLoss = tradeData.getProfitLoss();
 
         holder.mCurrencyTextView.setText("Currency:" + " " + currency);
-        holder.mAmountTextView.setText("Amount:" + " " +amount);
+        holder.mAmountTextView.setText("Amount:" + " " + amount);
         holder.mBuySellTextView.setText("Buy/Sell:" + " " + buySellPrice);
         holder.mTakeStopTextView.setText("Take/Stop:" + " " + takeStopLoss);
         holder.mVolumeTextView.setText("Volume:" + " " + volume);

@@ -20,13 +20,11 @@ public class ForexBusiness {
 
     /**
      * No args constructor for use in serialization
-     * 
      */
     public ForexBusiness() {
     }
 
     /**
-     * 
      * @param nextPage
      * @param prices
      * @param pair

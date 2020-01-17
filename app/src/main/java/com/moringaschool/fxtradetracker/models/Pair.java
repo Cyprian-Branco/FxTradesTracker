@@ -18,13 +18,11 @@ public class Pair {
 
     /**
      * No args constructor for use in serialization
-     * 
      */
     public Pair() {
     }
 
     /**
-     * 
      * @param quoteCurrency
      * @param code
      * @param baseCurrency

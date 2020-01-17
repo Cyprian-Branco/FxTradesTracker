@@ -53,13 +53,13 @@ public class TradeData implements Serializable {
         this.currency = currency;
 
     }
+
     String currency;
     String amount;
     String buyingSellingPrice;
     String stopTakePrice;
     String volume;
     String profitLoss;
-
 
 
     public TradeData(String currency, String amount, String buyingSellingPrice, String stopTakePrice, String volume, String profitLoss) {
@@ -71,7 +71,7 @@ public class TradeData implements Serializable {
         this.profitLoss = profitLoss;
     }
 
-    public  TradeData(){
+    public TradeData() {
 
     }
 }

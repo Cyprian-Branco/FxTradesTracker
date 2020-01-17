@@ -65,10 +65,10 @@ public class LiveQuotesActivity extends Fragment {
             @Override
             public void onResponse(Call<ForexBusiness> call, Response<ForexBusiness> response) {
                 hideProgressBar();
-                Log.i(TAG,Integer.toString(response.code()));
+                Log.i(TAG, Integer.toString(response.code()));
                 if (response.isSuccessful()) {
-                    liveQuotes= response.body().getPrices();
-                    Log.i(TAG,liveQuotes.get(0).getHighAsk());
+                    liveQuotes = response.body().getPrices();
+                    Log.i(TAG, liveQuotes.get(0).getHighAsk());
                     mAdapter = new LiveQuotesAdapter(getActivity(), liveQuotes);
                     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
                     mRecyclerView.setLayoutManager(layoutManager);
@@ -77,7 +77,7 @@ public class LiveQuotesActivity extends Fragment {
                     mRecyclerView.setHasFixedSize(true);
 
                     showLiveQuotes();
-                }else{
+                } else {
                     showUnsuccessfulMessage();
                 }
             }
@@ -91,18 +91,22 @@ public class LiveQuotesActivity extends Fragment {
         });
         return view;
     }
-    private void showFailureMessage(){
+
+    private void showFailureMessage() {
         mErrorTextView.setText("Something went wrong. Pleas check your internet connection and try again later");
         mErrorTextView.setVisibility(View.VISIBLE);
     }
-    private void showUnsuccessfulMessage(){
+
+    private void showUnsuccessfulMessage() {
         mErrorTextView.setText("Something wnr wrong.Please try again later");
         mErrorTextView.setVisibility(View.VISIBLE);
     }
-    private void showLiveQuotes(){
+
+    private void showLiveQuotes() {
         mRecyclerView.setVisibility(View.VISIBLE);
     }
-    private void hideProgressBar(){
+
+    private void hideProgressBar() {
         mProgressBar.setVisibility(View.GONE);
     }
 }

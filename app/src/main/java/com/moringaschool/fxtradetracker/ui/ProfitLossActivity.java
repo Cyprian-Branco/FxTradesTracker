@@ -1,44 +1,43 @@
 package com.moringaschool.fxtradetracker.ui;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.moringaschool.fxtradetracker.models.TradeData;
 
-
-import android.app.AlertDialog;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.moringaschool.fxtradetracker.R;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import com.moringaschool.fxtradetracker.models.TradeData;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProfitLossActivity extends Fragment{
-    @BindView(R.id.currencyEditText) EditText mCurrencyEditText;
-    @BindView(R.id.amountEditText) EditText mAmountEditText;
-    @BindView(R.id.buyingEditText) EditText mBuyingEditText;
-    @BindView(R.id.priceEditText) EditText mPriceEditText;
-    @BindView(R.id.volumeEditText) EditText mVolumeEditText;
-    @BindView(R.id.profitLossEditText) EditText mProfitLossEditText;
-    @BindView(R.id.calculateTradeData) Button mCalculateTradeData;
+public class ProfitLossActivity extends Fragment {
+    @BindView(R.id.currencyEditText)
+    EditText mCurrencyEditText;
+    @BindView(R.id.amountEditText)
+    EditText mAmountEditText;
+    @BindView(R.id.buyingEditText)
+    EditText mBuyingEditText;
+    @BindView(R.id.priceEditText)
+    EditText mPriceEditText;
+    @BindView(R.id.volumeEditText)
+    EditText mVolumeEditText;
+    @BindView(R.id.profitLossEditText)
+    EditText mProfitLossEditText;
+    @BindView(R.id.calculateTradeData)
+    Button mCalculateTradeData;
 
     FirebaseAuth mAuth;
     DatabaseReference mDatabase;
@@ -63,7 +62,8 @@ public class ProfitLossActivity extends Fragment{
         return view;
 
     }
-    private void addTradeData(){
+
+    private void addTradeData() {
         String currency = mCurrencyEditText.getText().toString().trim();
         String amount = mAmountEditText.getText().toString().trim();
         String buyingSellingPrice = mBuyingEditText.getText().toString().trim();
@@ -73,8 +73,8 @@ public class ProfitLossActivity extends Fragment{
 
 
         String id = mDatabase.push().getKey();
-        TradeData tradeData = new TradeData(currency,amount,buyingSellingPrice, takeProfitLossPrice,
-            volume,profitLossAmount);
+        TradeData tradeData = new TradeData(currency, amount, buyingSellingPrice, takeProfitLossPrice,
+                volume, profitLossAmount);
 
         mDatabase.child(id).setValue(tradeData);
 
